@@ -27,7 +27,7 @@ import com.lucianosilva.blog.SampleJobExecuter;
  * @author luciano
  *
  */
-@WebServlet("/SampleJobController")
+@WebServlet(urlPatterns = "/SampleJobController", loadOnStartup = 2)
 public class SampleJobControlServlet extends HttpServlet{
 
 	/**
