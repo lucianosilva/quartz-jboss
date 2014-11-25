@@ -41,6 +41,7 @@ public class SampleJobControlServlet extends HttpServlet{
 	public void init( ServletConfig config ) throws ServletException {
 		super.init( config );
 
+		// define o agendamento da execucao do servico
 		// executa a cada 3 minutos todos os dias.
 		String firstJobDetail = "0 0/2 * * * ?";
 		logger.info("Getting servlet configuration for ");
@@ -70,7 +71,6 @@ public class SampleJobControlServlet extends HttpServlet{
 		} catch (ParseException pe) {
 			logger.error(pe.getMessage(), pe);
 		}
-
 	}
 
 	@Override
